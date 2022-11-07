@@ -20,8 +20,10 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async ({ view }) => {
-  return view.render('welcome')
-})
+Route.group(() => {
+  Route.get('/users', 'UsersController.index')
+}).prefix('/api')
 
-Route.get('/users', 'UsersController.index')
+Route.get('*', async ({ view }) => {
+  return view.render('frontend-react-app')
+})
