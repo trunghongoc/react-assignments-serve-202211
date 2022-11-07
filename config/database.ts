@@ -20,7 +20,7 @@ const databaseConfig: DatabaseConfig = {
   | file.
   |
   */
-  connection: Env.get('DB_CONNECTION') || 'sqlite',
+  connection: Env.get('DB_CONNECTION'),
 
   connections: {
     /*
