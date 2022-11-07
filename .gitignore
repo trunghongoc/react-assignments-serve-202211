@@ -3,5 +3,6 @@ coverage
 .vscode
 .DS_STORE
 .env
+build
 tmp/*
 !tmp/db.sqlite3
