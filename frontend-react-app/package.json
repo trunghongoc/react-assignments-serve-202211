@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BUILD_PATH='./../backend/public' react-scripts build && cp ./../backend/public/index.html ./../backend/resources/views/frontend-react-app.edge",
+    "build": "BUILD_PATH='./../public' react-scripts build && cp ./../public/index.html ./../resources/views/frontend-react-app.edge",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
