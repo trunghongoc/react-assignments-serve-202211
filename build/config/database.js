@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Env_1 = __importDefault(global[Symbol.for('ioc.use')]("Adonis/Core/Env"));
 const Application_1 = __importDefault(global[Symbol.for('ioc.use')]("Adonis/Core/Application"));
 const databaseConfig = {
-    connection: Env_1.default.get('DB_CONNECTION') || 'sqlite',
+    connection: Env_1.default.get('DB_CONNECTION'),
     connections: {
         sqlite: {
             client: 'sqlite',
             connection: {
-                filename: Application_1.default.makePath('dbs/db.sqlite3'),
+                filename: Application_1.default.makePath('db.sqlite3'),
             },
             pool: {
                 afterCreate: (conn, cb) => {
